@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listFragmentCars">
+
+    <fragment
+        android:id="@+id/listFragmentCars"
+        android:name="com.example.testempresa.ui.fragment.listCars.ListFragmentCars"
+        android:label="fragment_list_cars"
+        tools:layout="@layout/fragment_list_cars" >
+        <action
+            android:id="@+id/action_listFragmentCars_to_detailsFragmentCar"
+            app:destination="@id/detailsFragmentCar" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragmentCar"
+        android:name="com.example.testempresa.ui.fragment.detailsCars.DetailsFragmentCar"
+        android:label="fragment_details_car"
+        tools:layout="@layout/fragment_details_car" >
+        <argument
+            android:name="car"
+            app:argType="com.example.testempresa.data.local.CarTable" />
+        <action
+            android:id="@+id/action_detailsFragmentCar_to_finishFragment"
+            app:destination="@id/finishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finishFragment"
+        android:name="com.example.testempresa.ui.fragment.confirmi.FinishFragment"
+        android:label="fragment_finish"
+        tools:layout="@layout/fragment_finish" >
+        <argument
+            android:name="cartable"
+            app:argType="com.example.testempresa.data.local.CarTable" />
+    </fragment>
+</navigation>

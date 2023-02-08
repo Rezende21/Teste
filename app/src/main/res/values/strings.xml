@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">TestEmpresa</string>
+
+
+    <string name="year_car">ano</string>
+    <string name="price_car">Preço</string>
+    <string name="name_car">Modelo</string>
+    <string name="fac_marca">Fabricante</string>
+    <string name="gas">Combustivel</string>
+    <string name="num_port">Numero de portas</string>
+    <string name="color">Cor</string>
+    <string name="valor_fipe">Valor fipe</string>
+    <string name="getIt">Eu quero</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Nome</string>
+    <string name="email">Email</string>
+    <string name="phone">Telefone</string>
+    <string name="save">Salvar</string>
+    <string name="veiculos">Veiculos</string>
+</resources>
