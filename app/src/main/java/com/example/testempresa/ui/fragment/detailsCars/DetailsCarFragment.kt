@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.testempresa.data.local.CarTable
@@ -13,12 +12,11 @@ import com.example.testempresa.databinding.FragmentDetailsCarBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class DetailsFragmentCar : Fragment() {
+class DetailsCarFragment : Fragment() {
 
     private val binding by lazy { FragmentDetailsCarBinding.inflate(layoutInflater) }
-    private val viewModel by viewModels<DetailsViewModelCars>()
     private lateinit var cartable : CarTable
-    private val args : DetailsFragmentCarArgs by navArgs()
+    private val args : DetailsCarFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,18 +29,18 @@ class DetailsFragmentCar : Fragment() {
     }
 
     private fun initView() {
-        binding.txtCarFabResult.text = cartable.name_fab
-        binding.txtCarNameResult.text = cartable.name_car
-        binding.txtCarYearResult.text = cartable.car_year.toString()
-        binding.txtCarGasResult.text = cartable.car_gas
-        binding.txtCarPortResult.text = cartable.num_port.toString()
+        binding.txtCarFabResult.text = cartable.nameFab
+        binding.txtCarNameResult.text = cartable.nameCar
+        binding.txtCarYearResult.text = cartable.carYear.toString()
+        binding.txtCarGasResult.text = cartable.carGas
+        binding.txtCarPortResult.text = cartable.numPort.toString()
         binding.txtCarValorResult.text = cartable.price.toString()
         binding.txtCarColorResult.text = cartable.color
     }
 
     private fun completeRegister() {
         binding.btGetIt.setOnClickListener {
-            val action = DetailsFragmentCarDirections.actionDetailsFragmentCarToFinishFragment(cartable)
+            val action = DetailsCarFragmentDirections.actionDetailsFragmentCarToFinishFragment(cartable)
             findNavController().navigate(action)
         }
     }

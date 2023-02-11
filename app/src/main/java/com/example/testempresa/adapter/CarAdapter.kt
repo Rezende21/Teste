@@ -6,24 +6,24 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.testempresa.data.remote.Cars
-import com.example.testempresa.databinding.RecycleviewLineBinding
+import com.example.testempresa.databinding.ItemListBinding
 
 class CarAdapter(
     private val onClick : (Cars) -> Unit
 ) : ListAdapter<Cars, CarAdapter.MyViewHolder>(DiffCallback()) {
 
-    class MyViewHolder(private val binding: RecycleviewLineBinding) : RecyclerView.ViewHolder(binding.root) {
+    class MyViewHolder(private val binding: ItemListBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item : Cars) {
-            binding.txtNameCar.text = item.nome_modelo
+            binding.txtNameCar.text = item.nomeModelo
             binding.txtYearCar.text = item.ano.toString()
-            binding.txtPrice.text = item.valor_fipe.toString()
+            binding.txtPrice.text = item.valorFipe.toString()
         }
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val binding = RecycleviewLineBinding.inflate(inflater, parent, false)
+        val binding = ItemListBinding.inflate(inflater, parent, false)
         return MyViewHolder(binding)
     }
 

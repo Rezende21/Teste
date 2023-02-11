@@ -10,7 +10,7 @@ import androidx.room.Query
 interface CarDao {
 
     @Query("SELECT * FROM Car")
-    fun showAllCars() : LiveData<List<CarTable>>
+    suspend fun showAllCars() : List<CarTable>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertCarToDB(car: CarTable)

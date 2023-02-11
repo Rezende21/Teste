@@ -5,7 +5,7 @@ import com.example.testempresa.MainCoroutineRule
 import com.example.testempresa.data.local.CarTable
 import com.example.testempresa.repository.FakeRepository
 import com.example.testempresa.state.ResourceState
-import com.example.testempresa.ui.fragment.detailsCars.DetailsViewModelCars
+import com.example.testempresa.ui.fragment.detailsCars.FinishCarViewModel
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.junit.Before
@@ -20,11 +20,11 @@ class SaveViewModel {
 
     @get:Rule
     var mainCoroutineRule = MainCoroutineRule()
-    private lateinit var viewModel : DetailsViewModelCars
+    private lateinit var viewModel : FinishCarViewModel
 
     @Before
     fun setup() {
-        viewModel = DetailsViewModelCars(FakeRepository())
+        viewModel = FinishCarViewModel(FakeRepository())
     }
 
     @Test

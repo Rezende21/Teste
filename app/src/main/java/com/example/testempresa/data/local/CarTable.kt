@@ -13,19 +13,19 @@ data class CarTable(
     val id : Int,
 
     @ColumnInfo("name_fab")
-    val name_fab : String,
+    val nameFab : String,
 
     @ColumnInfo("name_car")
-    val name_car : String,
+    val nameCar : String,
 
     @ColumnInfo("car_year")
-    val car_year : Int,
+    val carYear : Int,
 
     @ColumnInfo("car_gas")
-    val car_gas : String,
+    val carGas : String,
 
     @ColumnInfo("num_port")
-    val num_port : Int,
+    val numPort : Int,
 
     @ColumnInfo("price")
     val price : Double,

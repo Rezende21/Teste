@@ -7,13 +7,13 @@ data class Cars(
     val id : Int,
 
     @SerializedName("marca_id")
-    val marca_id : Int,
+    val marcaId : Int,
 
     @SerializedName("marca_nome")
-    val marca_nome : String,
+    val marcaNome : String,
 
     @SerializedName("nome_modelo")
-    val nome_modelo : String,
+    val nomeModelo : String,
 
     @SerializedName("ano")
     val ano : Int,
@@ -22,10 +22,10 @@ data class Cars(
     val combustivel : String,
 
     @SerializedName("num_portas")
-    val num_portas : Int,
+    val numPortas : Int,
 
     @SerializedName("valor_fipe")
-    val valor_fipe : Double,
+    val valorFipe : Double,
 
     @SerializedName("cor")
     val cor : String
